@@ -6,7 +6,7 @@ namespace Lab1_CoffeeShop.Models
     public class Product
     {
         [Key]
-        public int id { get; set; }
+        public string id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public decimal price { get; set; }

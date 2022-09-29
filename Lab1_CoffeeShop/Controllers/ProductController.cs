@@ -16,5 +16,13 @@ namespace Lab1_CoffeeShop.Controllers
 
             return View(prods);
         }
+
+        public IActionResult Detail(string id)
+        {
+            var db = new MySqlConnection("Server=127.0.0.1;Database=coffeeshop;Uid=root;Pwd=generalpw1");
+            Product product = db.Get<Product>(id);
+
+            return View(product);
+        }
     }
 }
